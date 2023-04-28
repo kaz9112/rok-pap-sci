@@ -14,9 +14,13 @@ function playRound(getComputerChoice, userChoicesInputs) {
     // lowercased input text
     userChoicesInputs = userChoicesInputs.toLowerCase()
     getComputerChoice = getComputerChoice.toLowerCase()
+
+    // print user and computer choices
     console.log(`computer choose ${getComputerChoice}`)
     console.log(`You choose ${userChoicesInputs}`)
-    
+    console.log("")
+
+    // conditional result statements
     if (userChoicesInputs == getComputerChoice) {
         return "Draw"
     } else if (userChoicesInputs == "rock" && getComputerChoice == "paper") {
