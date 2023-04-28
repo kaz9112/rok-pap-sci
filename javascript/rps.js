@@ -1,3 +1,4 @@
+// function for computer ai
 function getComputerChoice() {
     compChoice = Math.round(Math.random() * 2)
     if (compChoice == 0) {
@@ -5,11 +6,35 @@ function getComputerChoice() {
     } else if (compChoice == 1) {
         return "Paper";
     } else {
-        return "Scissor"
+        return "Scissor";
     }
 }
 
-console.log("-----Rock Paper Scissor-----")
-console.log("")
-console.log("")
+function playRound(getComputerChoice, userChoicesInputs) {
+    // lowercased input text
+    userChoicesInputs = userChoicesInputs.toLowerCase()
+    getComputerChoice = getComputerChoice.toLowerCase()
+    console.log(`computer choose ${getComputerChoice}`)
+    console.log(`You choose ${userChoicesInputs}`)
+    
+    if (userChoicesInputs == getComputerChoice) {
+        return "Draw"
+    } else if (userChoicesInputs == "rock" && getComputerChoice == "paper") {
+        return "You lose"
+    } else if (userChoicesInputs == "paper" && getComputerChoice == "scissor") {
+        return "You lose"
+    } else if (userChoicesInputs == "scissor" && getComputerChoice == "rock") {
+        return "You lose"
+    } else {
+        return "You win"
+    }
+}
 
+
+// minimal ui on terminal
+console.log("-----Rock Paper Scissor-----");
+console.log("");
+
+// create variables for input
+let userChoicesInputs = "rock";
+console.log(playRound(getComputerChoice(), userChoicesInputs))
