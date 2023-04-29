@@ -13,6 +13,7 @@ function getComputerChoice() {
     }
 }
 
+// function to represent a game round
 function playRound(getComputerChoice, userChoicesInputs) {
     // lowercased input text
     userChoicesInputs = userChoicesInputs.toLowerCase()
