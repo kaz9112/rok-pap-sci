@@ -1,6 +1,9 @@
 // function for computer ai
 function getComputerChoice() {
+    // Generate random conditions for string conversion
     compChoice = Math.round(Math.random() * 2)
+
+    // Convert rand numbers to strings
     if (compChoice == 0) {
         return "Rock";
     } else if (compChoice == 1) {
