@@ -1,5 +1,6 @@
 // function for computer ai
 function getComputerChoice() {
+
     // Generate random conditions for string conversion
     compChoice = Math.round(Math.random() * 2)
 
@@ -15,6 +16,7 @@ function getComputerChoice() {
 
 // function to represent a game round
 function playRound(getComputerChoice, userChoicesInputs) {
+
     // lowercased input text
     userChoicesInputs = userChoicesInputs.toLowerCase()
     getComputerChoice = getComputerChoice.toLowerCase()
@@ -44,7 +46,6 @@ console.log("");
 
 // create variables for input
 const readline = require('readline');
-
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
