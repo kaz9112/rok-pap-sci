@@ -17,7 +17,6 @@ function playRound(getComputerChoice, userChoicesInputs) {
 
     // print user and computer choices
     console.log(`computer choose ${getComputerChoice}`)
-    console.log(`You choose ${userChoicesInputs}`)
     console.log("")
 
     // conditional result statements
@@ -40,5 +39,16 @@ console.log("-----Rock Paper Scissor-----");
 console.log("");
 
 // create variables for input
-let userChoicesInputs = "rock";
-console.log(playRound(getComputerChoice(), userChoicesInputs))
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+// run game
+rl.question("You choose: ", 
+(userInput) => {
+    console.log(playRound(getComputerChoice(), userInput))
+    rl.close()
+})
