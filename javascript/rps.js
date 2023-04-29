@@ -2,7 +2,7 @@
 function getComputerChoice() {
 
     // Generate random conditions for string conversion
-    compChoice = Math.round(Math.random() * 2)
+    compChoice = Math.round(Math.random() * 2);
 
     // Convert rand numbers to strings
     if (compChoice == 0) {
@@ -18,24 +18,24 @@ function getComputerChoice() {
 function playRound(getComputerChoice, userChoicesInputs) {
 
     // lowercased input text
-    userChoicesInputs = userChoicesInputs.toLowerCase()
-    getComputerChoice = getComputerChoice.toLowerCase()
+    userChoicesInputs = userChoicesInputs.toLowerCase();
+    getComputerChoice = getComputerChoice.toLowerCase();
 
     // print user and computer choices
-    console.log(`computer choose ${getComputerChoice}`)
-    console.log("")
+    console.log(`computer choose ${getComputerChoice}`);
+    console.log("");
 
     // conditional result statements
     if (userChoicesInputs == getComputerChoice) {
-        return "Draw"
+        return "Draw";
     } else if (userChoicesInputs == "rock" && getComputerChoice == "paper") {
-        return "You lose"
+        return "You lose";
     } else if (userChoicesInputs == "paper" && getComputerChoice == "scissor") {
-        return "You lose"
+        return "You lose";
     } else if (userChoicesInputs == "scissor" && getComputerChoice == "rock") {
-        return "You lose"
+        return "You lose";
     } else {
-        return "You win"
+        return "You win";
     }
 }
 
@@ -54,6 +54,6 @@ const rl = readline.createInterface({
 // run game
 rl.question("You choose: ", 
 (userInput) => {
-    console.log(playRound(getComputerChoice(), userInput))
-    rl.close()
+    console.log(playRound(getComputerChoice(), userInput));
+    rl.close();
 })
