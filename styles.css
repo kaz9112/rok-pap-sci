@@ -6,16 +6,24 @@ body {
   display: flex;
   max-width: 1100px;
   min-width: 600px;
-  margin: 17% auto 100px auto;
+  margin: 7% auto 100px auto;
   justify-content: space-around;
 }
 
-.results-container {
+.results-player {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
+
+.results-npc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 .middle-container {
   padding-top: 15%;
@@ -45,7 +53,7 @@ button {
   background-color: rgb(26, 138, 243);
   border: none;
   border-radius: 10px;
-  width: 240px;
+  width: 200px;
   height: 40px;
   padding: 5px;
   color: white;
