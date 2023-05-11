@@ -39,47 +39,64 @@ function playRound(getComputerChoice, userChoicesInputs) {
     }
 }
 
+function addText(playerChoices, npcChoices, gameResult) {
+    let userHeading = document.querySelector(".player-choices-text");
+    let npcHeading = document.querySelector(".npc-choices-text");
+    let result = document.querySelector(".game-result")
+
+    userHeading.textContent = `You Choose ${playerChoices}`;
+    npcHeading.textContent = `NPC Choose ${npcChoices}`;
+    result.textContent = gameResult;
+}
+
+function chooseRock() {
+    console.log("rock")
+    npcChoice = getComputerChoice()
+    let result = playRound(npcChoice, "rock")
+
+    const imgChoice = document.querySelector(".player-img");
+    const imgNpc = document.querySelector(".npc-img");
+    
+    imgChoice.src = "img\\rock.jpg"
+    imgNpc.src = `img\\${npcChoice}.jpg`
+
+    addText('rock', npcChoice, result)
+}
+
+function choosePaper() {
+    console.log("paper")
+    npcChoice = getComputerChoice()
+    let result = playRound(npcChoice, "paper")
+
+    const imgChoice = document.querySelector(".player-img");
+    const imgNpc = document.querySelector(".npc-img");
+
+    imgChoice.src = "img\\paper.jpg"
+    imgNpc.src = `img\\${npcChoice}.jpg`
+
+    addText('paper', npcChoice, result)
+}
+
+function chooseScissor() {
+    console.log("scissor")
+    npcChoice = getComputerChoice()
+    let result = playRound(npcChoice, "scissor")
+
+    const imgChoice = document.querySelector(".player-img");
+    const imgNpc = document.querySelector(".npc-img");
+
+    imgChoice.src = "img\\scissor.jpg";
+    imgNpc.src = `img\\${npcChoice}.jpg`;
+
+    addText('scissor', npcChoice, result)
+}
+
 
 // minimal ui on terminal
 console.log("-----Rock Paper Scissor-----");
 console.log("");
 let npcChoice = ""
 
-function chooseRock() {
-    console.log("rock")
-    npcChoice = getComputerChoice()
-    console.log(playRound(npcChoice, "rock"))
-
-    let imgChoice = document.querySelector(".player-img");
-    let imgNpc = document.querySelector(".npc-img");
-    
-    imgChoice.src = "img\\rock.jpg"
-    imgNpc.src = `img\\${npcChoice}.jpg`
-}
-
-function choosePaper() {
-    console.log("paper")
-    npcChoice = getComputerChoice()
-    console.log(playRound(npcChoice, "paper"))
-
-    let imgChoice = document.querySelector(".player-img");
-    let imgNpc = document.querySelector(".npc-img");
-
-    imgChoice.src = "img\\paper.jpg"
-    imgNpc.src = `img\\${npcChoice}.jpg`
-}
-
-function chooseScissor() {
-    console.log("scissor")
-    npcChoice = getComputerChoice()
-    console.log(playRound(npcChoice, "scissor"))
-
-    let imgChoice = document.querySelector(".player-img");
-    let imgNpc = document.querySelector(".npc-img");
-
-    imgChoice.src = "img\\scissor.jpg";
-    imgNpc.src = `img\\${npcChoice}.jpg`;
-}
 
 
 
