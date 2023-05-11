@@ -1,0 +1,60 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  max-width: 1100px;
+  min-width: 600px;
+  margin: 17% auto 100px auto;
+  justify-content: space-around;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.middle-container {
+  padding-top: 15%;
+}
+
+.img-pla {
+
+}
+
+.img-npc {
+
+}
+
+h3 {
+
+}
+
+.button-container {
+  display: flex;
+  max-width: 1100px;
+  min-width: 600px;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+button {
+  background-color: rgb(26, 138, 243);
+  border: none;
+  border-radius: 10px;
+  width: 240px;
+  height: 40px;
+  padding: 5px;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(116, 188, 255);
+}
+
+button:active {
+  background-color: rgb(217, 237, 255);
+}

@@ -1,0 +1,56 @@
+<!-- make main flex main-container
+make player flex container, middle container for vs, and npc container
+make player flex container interior, filled with imgs, and text rps
+make middle container, large 'VS' text
+make npc flex container interior, 
+make flex for button
+
+make css styling
+make js transformations transitions
+make imgs, h2 or h3 texts for rps choices with js
+type results and who lose and win and score-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+
+  <body>
+
+    <div class="main-container">
+      <div class="results-container">
+        <h2 class="player-text">Player</h2>
+        <img src="img\rock.jpg">
+        
+      </div>
+      <div class="middle-container">
+        <h1>VS</h1>
+      </div>
+      <div class="results-container">
+        <h2 class="npc-text">NPC</h2>
+        <img src="img\rock.jpg">
+        
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button onclick="chooseRock()">Rock</button>
+      <button onclick="choosePaper()">Paper</button>
+      <button onclick="chooseScissor()">Scissor</button>
+    </div>
+
+    <script src="javascript/rps.js"></script>
+
+  </body>
+
+  
+</html>

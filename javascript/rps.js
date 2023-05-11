@@ -43,17 +43,58 @@ function playRound(getComputerChoice, userChoicesInputs) {
 // minimal ui on terminal
 console.log("-----Rock Paper Scissor-----");
 console.log("");
+let npcChoice = ""
 
-// create variables for input
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
+function chooseRock() {
+    console.log("rock")
+    npcChoice = getComputerChoice()
+    console.log(playRound(npcChoice, "rock"))
+}
 
-// run game
-rl.question("You choose: ", 
-(userInput) => {
-    console.log(playRound(getComputerChoice(), userInput));
-    rl.close();
-})
+function choosePaper() {
+    console.log("paper")
+    npcChoice = getComputerChoice()
+    console.log(playRound(npcChoice, "paper"))
+}
+
+function chooseScissor() {
+    console.log("scissor")
+    npcChoice = getComputerChoice()
+    console.log(playRound(npcChoice, "scissor"))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // create variables for input
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// })
+
+// // run game
+// rl.question("You choose: ", 
+// (userInput) => {
+//     console.log(playRound(getComputerChoice(), userInput));
+//     rl.close();
+// })
