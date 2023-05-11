@@ -6,11 +6,11 @@ function getComputerChoice() {
 
     // Convert rand numbers to strings
     if (compChoice == 0) {
-        return "Rock";
+        return "rock";
     } else if (compChoice == 1) {
-        return "Paper";
+        return "paper";
     } else {
-        return "Scissor";
+        return "scissor";
     }
 }
 
@@ -49,18 +49,36 @@ function chooseRock() {
     console.log("rock")
     npcChoice = getComputerChoice()
     console.log(playRound(npcChoice, "rock"))
+
+    let imgChoice = document.querySelector(".player-img");
+    let imgNpc = document.querySelector(".npc-img");
+    
+    imgChoice.src = "img\\rock.jpg"
+    imgNpc.src = `img\\${npcChoice}.jpg`
 }
 
 function choosePaper() {
     console.log("paper")
     npcChoice = getComputerChoice()
     console.log(playRound(npcChoice, "paper"))
+
+    let imgChoice = document.querySelector(".player-img");
+    let imgNpc = document.querySelector(".npc-img");
+
+    imgChoice.src = "img\\paper.jpg"
+    imgNpc.src = `img\\${npcChoice}.jpg`
 }
 
 function chooseScissor() {
     console.log("scissor")
     npcChoice = getComputerChoice()
     console.log(playRound(npcChoice, "scissor"))
+
+    let imgChoice = document.querySelector(".player-img");
+    let imgNpc = document.querySelector(".npc-img");
+
+    imgChoice.src = "img\\scissor.jpg";
+    imgNpc.src = `img\\${npcChoice}.jpg`;
 }
 
 
