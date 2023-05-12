@@ -39,48 +39,50 @@ function playRound(getComputerChoice, userChoicesInputs) {
     }
 }
 
+// function to modify ui text like npc, player, and 
 function addText(playerChoices, npcChoices, gameResult) {
-    let userHeading = document.querySelector(".player-choices-text");
-    let npcHeading = document.querySelector(".npc-choices-text");
-    let result = document.querySelector(".game-result")
+    let userHeading = document.querySelector(".player-choices-text"); //select text element of .player-choices-text
+    let npcHeading = document.querySelector(".npc-choices-text"); //select text element of .npc-choices-text
+    let result = document.querySelector(".game-result") // select text element of .game-result
 
-    userHeading.textContent = `You Choose ${playerChoices}`;
-    npcHeading.textContent = `NPC Choose ${npcChoices}`;
-    result.textContent = gameResult;
+    userHeading.textContent = `You Choose ${playerChoices}`; // modify text element on .player-choices-text
+    npcHeading.textContent = `NPC Choose ${npcChoices}`; // modify text element on .npc-choices-text
+    result.textContent = gameResult; // modify text element on .game-result
 }
 
+// function if player choose rock button
 function chooseRock() {
-    console.log("rock")
-    npcChoice = getComputerChoice()
-    let result = playRound(npcChoice, "rock")
+    npcChoice = getComputerChoice(); // run getComputerChoice function to get npcChoice of rock paper scissor
+    let result = playRound(npcChoice, "rock"); // get result from playing the playRound function
 
     const imgChoice = document.querySelector(".player-img");
     const imgNpc = document.querySelector(".npc-img");
     
-    imgChoice.src = "img\\rock.jpg"
-    imgNpc.src = `img\\${npcChoice}.jpg`
+    imgChoice.src = "img\\rock.jpg";
+    imgNpc.src = `img\\${npcChoice}.jpg`;
 
-    addText('rock', npcChoice, result)
-}
+    addText('rock', npcChoice, result);
+};
 
+
+// function if player choose paper button
 function choosePaper() {
-    console.log("paper")
-    npcChoice = getComputerChoice()
-    let result = playRound(npcChoice, "paper")
+    npcChoice = getComputerChoice(); // run getComputerChoice function to get npcChoice of rock paper scissor
+    let result = playRound(npcChoice, "paper"); // get result from playing the playRound function
 
     const imgChoice = document.querySelector(".player-img");
     const imgNpc = document.querySelector(".npc-img");
 
-    imgChoice.src = "img\\paper.jpg"
-    imgNpc.src = `img\\${npcChoice}.jpg`
+    imgChoice.src = "img\\paper.jpg";
+    imgNpc.src = `img\\${npcChoice}.jpg`;
 
-    addText('paper', npcChoice, result)
-}
+    addText('paper', npcChoice, result);
+};
 
+// function if player choose scissor button
 function chooseScissor() {
-    console.log("scissor")
-    npcChoice = getComputerChoice()
-    let result = playRound(npcChoice, "scissor")
+    npcChoice = getComputerChoice(); // run getComputerChoice function to get npcChoice of rock paper scissor
+    let result = playRound(npcChoice, "scissor"); // get result from playing the playRound function
 
     const imgChoice = document.querySelector(".player-img");
     const imgNpc = document.querySelector(".npc-img");
@@ -88,8 +90,8 @@ function chooseScissor() {
     imgChoice.src = "img\\scissor.jpg";
     imgNpc.src = `img\\${npcChoice}.jpg`;
 
-    addText('scissor', npcChoice, result)
-}
+    addText('scissor', npcChoice, result);
+};
 
 
 // minimal ui on terminal
